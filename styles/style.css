@@ -1,0 +1,250 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+body {
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header header header"
+        "sidebar main main main"
+        "footer footer footer footer"
+    ;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+header {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+    font-family: 'Julius';
+    text-align: left;
+    background: rgb(238,238,238);
+    background: linear-gradient(143deg, rgba(238,238,238,1) 29%, rgba(92,89,98,1) 93%); 
+    color: #a37208;
+    grid-area: header;
+}
+
+aside {
+    margin: 10px;
+    padding: 10px;
+    grid-area: sidebar;
+}
+
+aside form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+}
+
+aside form input, select{
+    font-family: 'Montserrat';
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #a37208;
+    outline: none;
+    padding: 5px;
+}
+
+main {
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    grid-area: main;
+    min-width: 800px;
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+footer {
+    text-align: center;
+    grid-area: footer;
+
+}
+
+.add-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #0000ff;
+    padding: 10px;
+    cursor: pointer;
+    color: #eee;
+    font-size: 1rem;
+    margin: 10px auto;
+    box-shadow: 1px 1px 1px black;
+}
+
+.add-btn:hover {
+    background-color: #3434ff;
+    box-shadow: none;
+    transform: 0.5;
+}
+
+.inventory-table-styles {
+    border-collapse: collapse;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.inventory-table-styles th,
+.inventory-table-styles td {
+    border: 1px solid #cccc;
+    font-family: 'Montserrat';
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.total-costs {
+    text-align: right;
+}
+
+.deleteBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #df0e0e;
+    box-shadow: 1px 1px 1px #000000;
+}
+
+.editBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #0000ff;
+    box-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background-color: #ff2727;
+    box-shadow: none;
+    transform: 0.5;
+
+}
+
+.editBtn:hover {
+    background-color: #3434ff;
+    box-shadow: none;
+    transform: 0.5;
+}
+
+
+.edit-modal-styles {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    width: 50%;
+    height: 40%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.edit-form input {
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #a37208;
+    outline: none;
+    padding: 5px;
+}
+
+.search {
+    margin-right: 100px;
+    margin-top: 20px;
+    padding: 5px 10px 20px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.search input {
+    border-radius: 5px;
+    border: 1px solid #a37208;
+    outline: none;
+    padding: 5px;
+}
+
+.search-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #0000ff;
+    box-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+.search-btn:hover {
+    background-color: #3434ff;
+    box-shadow: none;
+    transform: 0.5;
+}
+
+.cancel-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+    background-color: #df0e0e;
+    box-shadow: 1px 1px 1px black;
+}
+
+.cancel-btn:hover {
+    background-color: #ff2727;
+    box-shadow: none;
+    transform: 0.5;
+}
+
+.search-result-style {
+    margin-top: 10px;
+    color: #df0e0e;
+    font-family: 'Julius';
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+

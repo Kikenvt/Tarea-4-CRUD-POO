@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cupra/Seat Inventory</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cupra/Seat Inventory</h1>
+        <div id="total-template" class="total-costs"></div>
+    </header>
+    <!--Formulario para añadir productos-->
+   
+        <aside>
+            <h2>Añadir Vehículos</h2>
+            <form id="model-form-events">
+                
+                <select name="model-brand" id="model-brand">
+                    <option value="Cupra">Cupra</option>
+                    <option value="Seat">Seat</option>
+                </select>
+                <input type="text" id="model-name" placeholder="Modelo..." required />
+                <input type="number" id="model-quantity" placeholder="Cantidad..." required />
+                <input type="number" id="model-price" placeholder="Precio..." required />
+                <button type="submit" class="add-btn">Agregar vehículo</button>
+            </form>
+            
+            <div class="search">
+                <h2>Buscar por Modelo:</h2>
+                <input type="search" id="search-input">
+                <button type="submit" id="search-btn" class="search-btn">BUSCAR</button>
+                <button id="reset-search-btn" class="cancel-btn">CANCELAR</button>
+                <div id="search-result" class="search-result-style"></div>
+            </div>
+            
+        </aside>
+
+        <main>
+            <table class="inventory-table-styles">
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+                <tbody id="clear-table">
+ 
+                </tbody>
+            </table>
+           
+        </main>
+        <div id="edit-modal-events" class="edit-modal-styles">
+            <div class="modal-content" id="modal-content-events">
+                <h3>Editar Vehículo</h3>
+                <form class="edit-form" id="editForm">
+                    <label for="edit-brand">Marca:</label>
+                    <input type="text" name="edit-brand" id="edit-brand">
+                    
+                    <label for="edit-name">Modelo: </label>
+                    <input type="text" id="edit-name" required />
+                   
+                    <label for="edit-quantity">Cantidad: </label>
+                    <input type="number" id="edit-quantity" required />
+                    
+                    <label for="edit-price">Precio: </label>
+                    <input type="number" id="edit-price" required />
+                   
+                    <button type="submit" class="editBtn"> Enviar</button>
+                    
+                    <button class="cancel-btn">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    
+    <footer>
+        <p>Enrique Fernandez-Campoamor Fernandez</p>
+    </footer>
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+
+</html>
