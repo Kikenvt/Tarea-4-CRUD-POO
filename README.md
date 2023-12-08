@@ -1,6 +1,6 @@
 # Tárea 4 CRUD - POO
 **Autor**: Enrique Fernández - Campoamor
-**Github**:
+**Github**: https://github.com/Kikenvt/Tarea-4-CRUD-POO.git
 
 Utilizaremos la [tarea de inventario anterior](https://github.com/Kikenvt/Tarea2-CRUD-JS) pero esta vez aplicaremos la Programación Orienteada a Objetos (POO)
 
