@@ -1,12 +1,12 @@
 import { getFromLocalStorage } from './localStorage.js';
 import { carManager, defaultCars, searchInput, editinfo, carToEditId, modelBrandInput, modelNameInput, modelQuantityInput, modelPriceInput, saveUpdateBtn } from './main.js';
-import { totalInventory } from './total.js';
+
 
 //---------------------UPDATE CARS---------------------
 // Comprueba si hay coches en el local storage y los añade al carManager o añade los coches por defecto si no hay coches en el local storage
 export function updateCars() {
 	const cars = getFromLocalStorage();
-	console.log(cars);
+	
 	if (cars) {
 		cars.forEach((car) => {
 			// Comprueba si hay coches en el carManager que no estén en el local storage
@@ -102,5 +102,19 @@ export function updateInventoryTable(array) {
 		totalInventory(carManager.listCars());
 	});
 }
+
+//---------------------TOTAL INVENTORY---------------------
+// Funcion para calcular el precio total de los coches
+
+export const totalInventory = (array) => {
+	const totalTemplate = document.getElementById('total-template');
+
+	let totalPrice = 0;
+
+	array.forEach((car) => {
+		totalPrice += car.quantity * car.price;
+	});
+	totalTemplate.innerHTML = `Inventario total: ${totalPrice.toLocaleString()} €`;
+};
 
 
