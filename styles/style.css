@@ -248,3 +248,6 @@ footer {
     font-weight: bold;
 }
 
+.update-btn{
+    display: none;
+}

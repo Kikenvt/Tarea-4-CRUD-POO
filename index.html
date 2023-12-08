@@ -26,7 +26,9 @@
                 <input type="text" id="model-name" placeholder="Modelo..." required />
                 <input type="number" id="model-quantity" placeholder="Cantidad..." required />
                 <input type="number" id="model-price" placeholder="Precio..." required />
-                <button type="submit" class="add-btn">Agregar vehículo</button>
+                <button type="submit" class="add-btn" id="add-btn">Agregar vehículo</button>
+                <button type="submit" class="update-btn" id="update-btn" >Editar vehículo</button>
+                
             </form>
             
             <div class="search">
@@ -54,28 +56,7 @@
             </table>
            
         </main>
-        <div id="edit-modal-events" class="edit-modal-styles">
-            <div class="modal-content" id="modal-content-events">
-                <h3>Editar Vehículo</h3>
-                <form class="edit-form" id="editForm">
-                    <label for="edit-brand">Marca:</label>
-                    <input type="text" name="edit-brand" id="edit-brand">
-                    
-                    <label for="edit-name">Modelo: </label>
-                    <input type="text" id="edit-name" required />
-                   
-                    <label for="edit-quantity">Cantidad: </label>
-                    <input type="number" id="edit-quantity" required />
-                    
-                    <label for="edit-price">Precio: </label>
-                    <input type="number" id="edit-price" required />
-                   
-                    <button type="submit" class="editBtn"> Enviar</button>
-                    
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
-            </div>
-        </div>
+        
     
     <footer>
         <p>Enrique Fernandez-Campoamor Fernandez</p>

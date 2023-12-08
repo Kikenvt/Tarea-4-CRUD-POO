@@ -1,11 +1,7 @@
-
-
-export const saveToLocalStorage = (car) => {
-    
-    localStorage.setItem('cars', JSON.stringify(car))
-    
-}
+export const saveToLocalStorage = (cars) => {
+	localStorage.setItem('cars', JSON.stringify(cars));
+};
 
 export const getFromLocalStorage = () => {
-   return JSON.parse(localStorage.getItem('cars'))
-}
+	return JSON.parse(localStorage.getItem('cars'));
+};
