@@ -1,3 +1,4 @@
+// Funcionalidad: Guardar y obtener datos del localStorage
 export const saveToLocalStorage = (cars) => {
 	localStorage.setItem('cars', JSON.stringify(cars));
 };

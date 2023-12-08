@@ -1,3 +1,5 @@
+
+// Creamos la clase Car
 export class Car {
 	#id;
 	#brand;
