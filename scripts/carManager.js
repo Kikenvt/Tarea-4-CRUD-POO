@@ -6,7 +6,7 @@ export class CarManager {
 	}
 
 	listCars() {
-		return this.#products;
+		return this.#products = getFromLocalStorage() || [];
 	}
 
 	addCar(car) {

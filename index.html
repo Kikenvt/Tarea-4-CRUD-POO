@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cupra/Seat Inventory</title>
+		<link rel="stylesheet" href="/styles/style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cupra/Seat Inventory</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-
-<body>
-    <header>
-        <h1>Cupra/Seat Inventory</h1>
+	<body>
+        <div class="loader-page">
+            <h1>Cargando Inventario</h1>
+        </div>
+		<header>
+			<h1>Cupra/Seat Inventory</h1>
+			
+		</header>
+		<!--Formulario para añadir productos-->
+		<main>
+			<table class="inventory-table-styles">
+				<tr>
+					<th>Marca</th>
+					<th>Modelo</th>
+					<th>Cantidad</th>
+					<th>Precio</th>
+					<th>Acciones</th>
+				</tr>
+				<tbody id="clear-table"></tbody>
+			</table>
+		</main>
+        <div class="search">
+			<input type="search" id="search-input" placeholder="Buscar Modelo..." />
+			<button id="reset-search-btn" class="reset-search-btn">  <svg viewBox="0 0 16 16" class="bi bi-arrow-repeat" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"></path>
+                <path d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" fill-rule="evenodd"></path>
+              </svg>
+                  Reiniciar Busqueda </button>
+		</div>
         <div id="total-template" class="total-costs"></div>
-    </header>
-    <!--Formulario para añadir productos-->
-   
-        <aside>
-            <h2>Añadir Vehículos</h2>
-            <form id="model-form-events">
-                
-                <select name="model-brand" id="model-brand">
-                    <option value="Cupra">Cupra</option>
-                    <option value="Seat">Seat</option>
-                </select>
-                <input type="text" id="model-name" placeholder="Modelo..." required />
-                <input type="number" id="model-quantity" placeholder="Cantidad..." required />
-                <input type="number" id="model-price" placeholder="Precio..." required />
-                <button type="submit" class="add-btn" id="add-btn">Agregar vehículo</button>
-                <button type="submit" class="update-btn" id="update-btn" >Editar vehículo</button>
-                
-            </form>
+		<aside>
             
-            <div class="search">
-                <h2>Buscar por Modelo:</h2>
-                <input type="search" id="search-input">
-                <button type="submit" id="search-btn" class="search-btn">BUSCAR</button>
-                <button id="reset-search-btn" class="cancel-btn">CANCELAR</button>
-                <div id="search-result" class="search-result-style"></div>
-            </div>
-            
-        </aside>
+			<form id="model-form-events">
+                <h2>Añadir Vehículos</h2>
+				<select name="model-brand" id="model-brand">
+					<option value="Cupra">Cupra</option>
+					<option value="Seat">Seat</option>
+				</select>
+				<input type="text" id="model-name" placeholder="Modelo..." required />
+				<input
+					type="number"
+					id="model-quantity"
+					placeholder="Cantidad..."
+					required
+				/>
+				<input
+					type="number"
+					id="model-price"
+					placeholder="Precio..."
+					required
+				/>
+				<button type="submit" class="add-btn" id="add-update-btn">
+					Agregar vehículo
+				</button>
+			</form>
+		</aside>
+		
 
-        <main>
-            <table class="inventory-table-styles">
-                <tr>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Acciones</th>
-                </tr>
-                <tbody id="clear-table">
- 
-                </tbody>
-            </table>
-           
-        </main>
-        
-    
-    <footer>
-        <p>Enrique Fernandez-Campoamor Fernandez</p>
-    </footer>
-    <script type="module" src="/scripts/main.js"></script>
-</body>
-
+		<footer>
+			<p>Enrique Fernandez-Campoamor Fernandez</p>
+		</footer>
+		<script type="module" src="/scripts/main.js"></script>
+	</body>
 </html>
