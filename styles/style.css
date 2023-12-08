@@ -14,6 +14,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     height: 100%;
     margin: 10px;
     display: grid;
