@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Source Code Pro', monospace;
+    src: url(../assets/fonts/SourceCodePro-Regular.ttf);
+}
+
+body {
+    background-image: url(../assets/imgs/background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error404{
+    font-family: 'Source Code Pro', ;
+    font-size: 1.3rem;
+    background: rgba(238, 238, 238, 0.2);
+    margin: 10px;
+    margin-right: 100px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+    text-align: right;
+}
